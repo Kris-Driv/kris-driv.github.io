@@ -200,6 +200,8 @@ var DIRECTIONS = [
       }
       moveSequence.push(dir);
     }
+
+    return false;
   }
   
   function shuffleArray(array) {
