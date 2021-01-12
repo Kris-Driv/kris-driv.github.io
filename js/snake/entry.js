@@ -13,7 +13,7 @@ var DIRECTIONS = [
   var scl = 10;
   
   var food = [];
-  var foodLimit = 10;
+  var foodLimit = 25;
   
   var running = true;
   
@@ -90,6 +90,10 @@ var DIRECTIONS = [
   
   function draw() {
     if(!paused) background(bgColor);
+
+    noStroke();
+    fill("#34495e");
+    ellipse(width / 2, 0, width * 1.1, height / 1.8);
   
     snake.render();
     if (running && !paused) {
@@ -101,7 +105,7 @@ var DIRECTIONS = [
     //   textSize(16);
     //   text("Score: " + snake.score, width / 2, 20);
   
-      fill(255, 0, 100);
+      fill(snakeColor);
       food.forEach(f => {
         rect(f.x, f.y, scl, scl);
       });
